@@ -1,0 +1,40 @@
+<div
+  class="bg-black border-2 border-neutral-800 px-8 py-8 mx-4 my-4 rounded-xl flex justify-center items-center shadow-2xl flex-col hover:scale-[1.02] duration-300"
+>
+  <h1 class="text-2xl font-bold">Mono Calc</h1>
+  <div class="flex flex-col items-center justify-center">
+    <div class="p-4">
+      <div class="mb-6 text-right text-2xl text-neutral-300">
+        <!-- Display -->
+        <input
+          type="text"
+          class="w-full px-2 py-2 text-right bg-neutral-800 rounded hover:cursor-pointer hover:bg-neutral-700 duration-200"
+          disabled
+          [value]="displayValue"
+        />
+      </div>
+      <div class="grid grid-cols-4 gap-2 font-bold text-xl">
+        <!-- Buttons -->
+        <button class="calc-button" (click)="updateDisplay('7')">7</button>
+        <button class="calc-button" (click)="updateDisplay('8')">8</button>
+        <button class="calc-button" (click)="updateDisplay('9')">9</button>
+        <button class="calc-operator" (click)="updateDisplay('/')">/</button>
+
+        <button class="calc-button" (click)="updateDisplay('4')">4</button>
+        <button class="calc-button" (click)="updateDisplay('5')">5</button>
+        <button class="calc-button" (click)="updateDisplay('6')">6</button>
+        <button class="calc-operator" (click)="updateDisplay('*')">*</button>
+
+        <button class="calc-button" (click)="updateDisplay('1')">1</button>
+        <button class="calc-button" (click)="updateDisplay('2')">2</button>
+        <button class="calc-button" (click)="updateDisplay('3')">3</button>
+        <button class="calc-operator" (click)="updateDisplay('-')">-</button>
+
+        <button class="calc-operator" (click)="updateDisplay('0')">0</button>
+        <button class="calc-operator" (click)="updateDisplay('.')">.</button>
+        <button class="calc-operator" (click)="calculate()">=</button>
+        <button class="calc-operator" (click)="updateDisplay('+')">+</button>
+      </div>
+    </div>
+  </div>
+</div>
